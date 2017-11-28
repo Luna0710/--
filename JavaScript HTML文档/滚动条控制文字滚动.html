@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+ 	  #div1{
+		  width:20px;
+		  height:20px;
+		  background:red;
+		  position:absolute;
+		  }
+		  
+	 #div2{
+		 width:600px;
+		 height:20px;
+		 background:#ccc;
+		 position:relative;
+		 margin:10px auto;
+		 
+		 }
+		 
+		 
+		 #div3{
+			width:400px;
+			height:500px;
+			border:1px black solid;
+			overflow:hidden;
+		    position:relative;
+			 }
+		 #div4{
+			top:10px;
+			left:10px;
+			position:absolute;
+				 }
+</style>
+<script>
+  window.onload=function(){
+	  var oDiv=document.getElementById('div1');
+	  var oDiv1=document.getElementById('div2');
+	  var oDiv2=document.getElementById('div3');
+	   var oDiv3=document.getElementById('div4');
+	    
+	  var disX=0;
+	
+	  
+	  oDiv.onmousedown=function(e){
+		  var oEvent=e||window.event;
+		  disX=oEvent.clientX-oDiv.offsetLeft;
+		
+		  
+		  document.onmousemove=function(e){
+			  var oEvent=e||window.event;
+			  var l=oEvent.clientX-disX;
+			 
+			  
+			  if(l<0){
+				  l=0;
+				  }
+				  else if(l>oDiv1.offsetWidth-oDiv.offsetWidth){
+					l=oDiv1.offsetWidth-oDiv.offsetWidth;
+					  }
+					  
+					
+			  oDiv.style.left=l+'px';
+			  
+			  var scale=l/(oDiv1.offsetWidth-oDiv.offsetWidth);
+			
+			  var a=-scale*(oDiv3.offsetHeight-oDiv2.offsetHeight);
+			  document.title=a;
+			   oDiv3.style.top=a+'px';
+			  //定义一个变量存储滚动条位置比例
+			 // var scale=1/(oDiv1.offsetWidth-oDiv.offsetWidth);
+			 // oDiv2.style.width=500*scale+'px';
+			 // oDiv2.style.height=500*scale+'px';  
+                
+			  
+			document.onmouseup=function(){
+				 document.onmousemove=null;
+				document.onmouseup=null;
+				 }; 
+				 
+				 return false;
+			
+		  };
+		   
+	  };
+  };
+</script>
+
+</head>
+
+<body>
+<div id='div2'>
+<div id="div1"></div>
+</div>
+<div id='div3'>
+<div id='div4'>
+课程深度
+完全由blue(石川)自主研发的培训课程，和其他机构临时拼凑起来的课程，完全不同。 我们的课程有多深？市面上常见的HTML5书，只相当于我们HTML5课程的一小部分的知识量,超过绝大部分公司（如新浪、腾讯、淘宝等）的招聘要求。我们经常被模仿，(但从未被超越 ^_^ ),所以大家看到和我们课程相似的机构，不要觉得奇怪，我们早习惯了。
+
+20000行代码
+20000行代码
+就算是天才，哪怕上课听的再明白，只要下课不练，也是白搭。20000行代码，是我们对学员的最基本要求，勤学苦练这个词虽然老套，但却是学好HTML5最实在的方法。
+那20000行代码意味着什么？为大家列了一些参照标准：智能社官网 5430行，JQuery源码9440行，各类常见效果 平均40行，20000行，意味着你需要写一个智能社官网+一个JQuery+130个常见效果。
+所以，来智能社学习，会很累，请同学们做好吃苦的准备，而由此带来的回报，不会让你失望。
+
+说人话、拒绝枯燥
+说人话、拒绝枯燥
+我们憎恨一切恶心的、复杂的、装B的讲解方式，IT培训也要说人话。
+再牛的课程，学员学不会也是扯淡，每一节课，我们都会不断修正，不但让学员听懂，还要大家听到嗨听到爽！
+零基础的起点，保证任何有CSS基础的学员，都能轻松掌握，看看我们怎么讲课的.
+
+注重项目实战
+注重项目实战
+只有具备真实的项目经验，才能在工作中游刃有余。
+我们精选了大量来自企业的真实项目，作为案例（案例均来自讲师实际工作，并已获得相关授权），帮助学员掌握第一手工作经验。
+从此以后，你可以对“需要x年工作经验”这类招聘要求胸有成竹。
+
+完善的售后和终身课程升级服务
+完善的售后和终身课程升级服务
+课程更新，新东西以前没听过，怎么办？工作上碰到了之前没有用过的新技术，怎么办？工作中遇到课上学过的东西，但忘记用法了，怎么办？
+定期推出的新技术讲座，只要你是智能社的学员，就能终身享受，而且完全免费。
+定期开放的技术交流会，只要你是智能社的学员，就能终身享受，而且完全免费。
+
+课程随时更新
+课程随时更新
+智能社的课程，每天都在变，每讲一次课，都会有调整，只有这样，才能不断超越以前的自己。倾听学员反馈：偶尔会有学员说，“老师，我们工作里用了这个，课程里没讲”——每次听到这句话，我们都会打心底里高兴“太好了，加进来”，这就是我们的态度。
+HTML5、NodeJS、webGL……我们一直在进步。
+
+高性价比
+高性价比
+咨询有人会问：“你们学费好贵啊”，分享一个学员的真实经历。
+有个学员，来智能社之前，跑到一个培训机构去学JS，学费只要1600，确实够便宜，学了一个多月，连选项卡都不会写（视频直接免费看），期间遭遇各种差，讲师除了念书啥都不会，这还算是便宜吗？所以智能社的课程，不会折价，我们更愿意让学员花5800的学费，买到25800的知识。而不是花3600的学费，买到1000的知识。
+
+学员要求:
+1. 熟悉CSS，可运用XHTML+CSS2（DIV+CSS）编写简单的静态页面；
+2. 能够熟练的编写javascript的各种效果
+3. 有浓厚学习兴趣，能完成智能课堂的课后练习；
+4. 对于提升自己的价值，有内心的渴求；
+*  以上要求缺一不可～
+
+</div>
+</div>
+</body>
+</html>

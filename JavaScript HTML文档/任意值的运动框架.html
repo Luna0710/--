@@ -1,0 +1,86 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+div{
+	width:100px;
+	height:100px;
+	background:yellow;
+	margin:10px;
+	float:left;
+	filter:alpha(opacity:50);
+	opacity:0.5;
+}
+</style>
+
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	oDiv.onmouseover=function(){
+		startMove(this,'height',400);
+		};
+		oDiv.onmouseout=function(){
+		startMove(this,'height',100);
+		};
+		
+		
+		var oDiv2=document.getElementById('div2');
+	oDiv2.onmouseover=function(){
+		startMove(this,'opacity',100);
+		};
+		oDiv2.onmouseout=function(){
+		startMove(this,'opacity',50);
+		};
+		
+	};
+	
+	//获取对象某个属性值的函数
+	function getStyle(obj,name){
+		if(obj.currentStyle){
+			return currentStyle[name];
+			}
+			else{
+				return getComputedStyle(obj,false)[name];
+				}
+		}
+		
+function startMove(obj,	attr,iTarget){
+
+	clearInterval(obj.timer);
+	var cur=0;
+	obj.timer=setInterval(function(){
+		if(attr=='opacity'){
+		 cur=parseFloat(getStyle(obj,attr))*100	;
+			}
+			else{
+	 cur=parseInt(getStyle(obj,attr));
+			}	
+		var speed=(iTarget-cur)/6;
+		speed=speed>0?Math.ceil(speed):Math.floor(speed);
+		if(iTarget==cur){
+			clearInterval(obj.timer);
+			}
+			else{
+				if(attr=='opacity'){
+					obj.style.filter='alpha(opacity:'+(cur+speed)+')';
+					obj.style.opacity=(cur+speed)/100;						
+					}
+				else{
+				obj.style[attr]=cur+speed+'px';	
+				}
+				}
+		},30);
+	}
+	
+</script>
+</head>
+
+<body>
+	
+<div id='div1'>变高</div>
+<div id='div2'>透明度的变化</div>
+	
+</body>
+</html>

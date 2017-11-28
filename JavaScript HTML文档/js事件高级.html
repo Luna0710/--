@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+   window.onload=function(){
+	   var oBtn=document.getElementById('btn1');
+	   //attachEvent添加事件 attachEvent(事件名，函数);
+	   //IE8以下
+	/*oBtn.attachEvent('onclick',function(){
+		   alert('a');
+		   });
+		    oBtn.attachEvent('onclick',function(){
+		   alert('b');
+		   });*/
+		   //addEventListener(事件名，函数名，false)
+		   //这个函数仅仅是适应火狐，chrome以及IE9及以上的浏览器
+		  /* oBtn.addEventListener('click',function(){
+			   alert('a');
+			   },false);
+			   
+			     oBtn.addEventListener('click',function(){
+			   alert('b');
+			   },false);*/
+			   
+			   
+			   //兼容处理
+		  if(oBtn.attachEvent){
+				   oBtn.attachEvent('onclick',function(){
+		   alert('a');
+		   });
+		    oBtn.attachEvent('onclick',function(){
+		   alert('b');
+		   });
+		  }else{
+					    oBtn.addEventListener('click',function(){
+			   alert('a');
+			   },false);
+			   
+			     oBtn.addEventListener('click',function(){
+			   alert('b');
+			   },false);
+					   
+					   }
+	   };
+</script>
+</head>
+
+<body>
+<input id='btn1' type="button" value="按钮"/>
+</body>
+</html>

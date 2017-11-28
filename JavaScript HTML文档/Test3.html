@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>id选择器</title>
+<script src="jQuery/jquery-3.2.1.js"></script>
+<script language="javascript">
+  $().ready(function(){
+	  $("#btn1").click(function(){
+		  $("#img1").show(3000);//显示
+		  });
+		  
+	  $("#btn2").click(function(){
+		  $("#img1").hide(3000)//隐藏	
+		  });
+	  });
+</script>
+</head>
+
+<body>
+<img id="img1" src="imgs/1.jpg"/>
+<input id="btn1" type="button" name="显示" value="显示"/>
+<input  id="btn2" type="button" name="隐藏" value="隐藏"/>
+</body>
+</html>
