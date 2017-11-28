@@ -1,0 +1,24 @@
+.navbar-default .navbar-brand{
+    font-size:30px;
+    font-weight:bold;
+    color: cornflowerblue;
+    height:70px;
+    line-height:35px;
+}
+.navbar-default .navbar-nav>li> a{
+    font-size:16px;
+    font-weight:bold;
+    color: dodgerblue;
+    height:70px;
+    line-height:35px;
+}
+
+#home {
+    margin-top:70px;
+    padding:20px;
+    width:100%;
+    text-align:center;
+    background-color: cadetblue;
+   color: antiquewhite;
+}
+
