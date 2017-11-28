@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="../jQuery/jquery-3.2.1.js"></script>
+<script language="javascript">
+   //单项选择移动
+    function move(from,to){
+		var fromSelect=$("#"+from).find("option:selected");
+		//alert(fromSelect.text()+","+fromSelect.val());
+		var to=$("#"+to);
+		to.append("<option value="+fromSelect.val()+">"+fromSelect.text()+"</option>");
+		fromSelect.remove();
+		}
+	//多项移动
+	function moveAll(from,to){
+		var options=$("#"+from).find("option");
+		//alert(options.text()+","+options.val());
+	    var to=$("#"+to);
+		//to.append(options);顺序添加的方法
+		options.appendTo(to);//逆序添加的方法，详情请看jQuery API;
+		}	
+</script>
+</head>
+
+<body>
+<select id="s1" size="10" style="width:400px; height:200px;">
+  <option value="1">湖南</option>
+  <option value="2">四川</option>
+  <option value="3">重庆</option>
+  <option value="4">广州</option>
+</select>
+<input id="btn3" type="button" value="全部>>" onclick="moveAll('s1','s2')"/>
+<input id="btn1" type="button" value=">>" onclick="move('s1','s2')"/>
+<input id="btn2" type="button" value="<<" onclick="move('s2','s1')"/>
+<input id="btn4" type="button" value="全部<<" onclick="moveAll('s2','s1')"/>
+
+<select id="s2" size="10" style="width:400px; height:200px;">
+
+</select>
+</body>
+</html>

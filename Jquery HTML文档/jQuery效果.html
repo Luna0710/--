@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery效果</title>
+<script src="../jQuery/jquery-3.2.1.js"></script>
+<script language="javascript">
+$(function(){
+	//单个隐藏
+	$("#hide").click(function(){
+		$("#img").hide(2000);
+		});
+		//单个显示
+   $("#show").click(function(){
+		$("#img").show(2000);
+		});
+		//切换
+  $("#tog").click(function(){
+		$("#img").toggle(2000	);
+		});
+	});
+</script>
+</head>
+
+<body>
+<img src="../imgs/1.jpg"  id="img" alt="漫画"/>
+<input id="hide" type="button" value="隐藏"/>
+<input id="show" type="button" value="显示"/>
+<input id="tog" type="button" value="切换"/>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="../jQuery/jquery-3.2.1.js"></script>
+<script laguage="javascript">
+/*
+jQuery语法：
+  $(selector).action();
+  jQuery(selector).action();
+jQuery选择器：
+  $("")
+  jQuery("").action();
+*/
+$().ready(function(){
+	$("input").click(function(){
+		$("p").hide(3000);
+		});
+	});	
+</script>
+</head>
+
+<body>
+<p>点击按钮文字P标签文字中的文字将会消失</p>
+<p>点击按钮文字P标签文字中的文字将会消失</p>
+<p>点击按钮文字P标签文字中的文字将会消失</p>
+<input type="button" value="点击消失"/>
+</body>
+</html>

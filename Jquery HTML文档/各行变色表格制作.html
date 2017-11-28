@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.tab{
+	text-align:center;
+	width:100%;
+	font-family:楷体;
+	}
+	
+	.tab th{
+		background-color:#D5D5D5;
+		}
+</style>
+
+<script src="../jQuery/jquery-3.2.1.js"></script>
+<script language="javascript">
+ $(function(){
+	
+	init();
+	//表格移动变色
+	
+    $(".tab tr").mousemove(function(){
+		$(this).css("background-color","#FFF");
+		
+		}).mouseout(function(){
+			init();
+			});
+	 });
+	 
+	 function init(){
+		  //查找索引值为0 2 4...的值
+	 $(".tab tr:even").each(function(index, element) {
+        $(this).css("background-color","#EAEAEA");
+    });
+	
+	//查找索引值为1 3 5...的值
+	$(".tab tr:odd").each(function(index, element) {
+        $(this).css("background-color","#F3F3F3");
+    });
+		 }
+</script>
+
+</head>
+
+<body>
+<table class="tab" >
+<tr>
+<th><input type="checkbox"/></th>
+<th>编号</th>
+<th>姓名</th>
+<th>性别</th>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>10000</td>
+<td>zhangsan</td>
+<td>nan</td>	
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>10000</td>
+<td>zhangsan</td>
+<td>nan</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>10000</td>
+<td>zhangsan</td>
+<td>nan</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>10000</td>
+<td>zhangsan</td>
+<td>nan</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>10000</td>
+<td>zhangsan</td>
+<td>nan</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>10000</td>
+<td>zhangsan</td>
+<td>nan</td>
+</tr>
+
+</table>
+</body>
+</html>

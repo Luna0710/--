@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery事件1</title>
+<script src="../jQuery/jquery-3.2.1.js"></script>
+<script language="javascript">
+  $(function(){
+	 $("#f1").submit(function(){
+		 var name=$("input[name=name]").val();
+		 if(name.length==0){
+			 alert("姓名不能为空");
+			 return false;
+			 }
+		 });
+		 
+		 //让普通的按钮具有提交的功能
+		 $("#btn1").click(function(){
+			 var f1=$("#f1");
+			 f1.attr("action","http://baidu.com");
+			 f1.submit();//提交表单
+		
+	  });
+	  
+	  
+	   $("#btn1").click(function(){
+			 var f1=$("#f1");
+			 f1.attr("action","http://51cto.com");
+			 f1.submit();//提交表单
+		
+	  });
+  });
+</script>
+</head>
+
+<body>
+<form id="f1" action="" ,method="get">
+姓名：<input type="text" name="name"/><br/>
+<input type="submit" value="正常提交表单"/>
+<input id="btn1" type="button" value="提交到百度">
+<input id="btn2" type="button" value="提交到51">
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>选择器带href属性</title>
+<script src="../jQuery/jquery-3.2.1.js"></script>
+<script language="javascript">
+  $(function(){
+	  //选取带有href属性的元素
+	  var as=$("[href]");
+	  //遍历
+	  as.each(function(index, element) {
+        //alert($(this).attr("href")+" "+index);
+    });
+	
+	//选取带有target属性为_blank的标签
+	var as2=$("a[target=_blank]");
+	//遍历
+	as2.each(function(index, element) {
+    alert($(this).attr("href")+$(this).html()+"  "+index);
+    });
+	  });
+</script>
+</head>
+
+<body>
+<a href="http://baidu.com">百度</a>
+<a href="http://163.com" target="_blank">网易</a>
+<a href="http://qq.com">QQ</a>
+<a href="http://52cto.com" target="_blank">51cto</a>
+<input type="button" value="按钮"/>
+
+</body>
+</html>

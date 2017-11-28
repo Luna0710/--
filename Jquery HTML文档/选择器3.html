@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="../jQuery/jquery-3.2.1.js"></script>
+<script language="javascript">
+ $(function(){
+	 $("input[type=button]").click(function(){
+		 alert($(this).val());
+		 });
+		 
+	  $("input[type=submit]").click(function(){
+		 alert($(this).val());
+		 });
+		 
+	  $("input[type=reset]").click(function(){
+		
+			$("[disabled]").each(function(index, element) {
+                $(this).attr("disabled",false);
+            });
+			
+		 });
+		 
+		 
+	 });
+</script>
+</head>
+
+<body>
+<form id="action">
+姓名：
+<input type="text" name="name" value="张三" disabled="disabled"/><br/></br>
+性别：
+<input type="text" name="sex" value="女" readonly="readonly"/><br/></br>
+<input type="button" value="普通按钮" disabled="disabled"/></br></br>
+<input type="submit" value="提交按钮"/></br></br>
+<input type="reset" value="重置按钮"/>
+</form>
+</body>
+</html>
